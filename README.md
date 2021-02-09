@@ -19,6 +19,7 @@ Trève de parlotte, on rentre dans le vif du sujet, voilà les étapes :
 | firstName |
 | lastName  |
 | birthday  |
+| createdAt |
 
 | Place   |
 | ------- |
