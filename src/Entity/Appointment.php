@@ -23,12 +23,12 @@ class Appointment
     private $user;
 
     /**
-     * @ORM\OneToOne(targetEntity=Customer::class,  cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=Customer::class)
      */
     private $customer;
 
     /**
-     * @ORM\OneToOne(targetEntity=Place::class, cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=Place::class)
      */
     private $place;
 

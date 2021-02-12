@@ -37,6 +37,11 @@ class Customer
      */
     private $createdAt;
 
+     /**
+     * @ORM\OneToOne(targetEntity=Appointment::class, mappedBy="customer")
+     */
+    private $appointment;
+
 
     public function getId(): ?int
     {
@@ -90,5 +95,18 @@ class Customer
 
         return $this;
     }
+
+    public function getApoointment(): ?Appointment
+    {
+        return $this->appointment;
+    }
+
+    public function setAppointment(?Appointment $appointment): self
+    {
+        $this->appointment = $appointment;
+
+        return $this;
+    }
+
 
 }
