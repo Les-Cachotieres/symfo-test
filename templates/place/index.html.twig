@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Customer index{% endblock %}
+
+{% block body %}
+    <h1>Liste des lieux</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+             <th>Id</th>
+                <th>Nom du lieu</th>
+                <th>Adresse</th>
+                <th>Code postal</th>
+                <th>Ville</th>
+                 <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for place in places %}
+            <tr>
+                <td>{{ place.id }}</td>
+                <td>{{ place.name }}</td>
+                <td>{{ place.address }}</td>
+                <td>{{ place.zipcode }}</td>
+                <td>{{ place.city }}</td>
+                 {% endfor %}
+        </tbody>
+    </table>
+
+     {{ form_start(form, { attr: { 'accept-charset' : 'utf-8' }}) }}
+        <div class="form-group">
+          {{ form_label(form.upload_file) }}
+          {{ form_widget(form.upload_file) }}
+          {{ form_errors(form.upload_file) }}
+        </div>
+        <div class="form-group">
+          {{ form_widget(form.send, {'label': "Upload this file", 'attr' : { 'class': 'btn btn-primary' }}) }}
+        </div>
+        {{ form_rest(form) }}
+      {{ form_end(form) }}
+
+</div>
+
+
+
+
+{% endblock %}
