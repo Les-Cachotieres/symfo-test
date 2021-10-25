@@ -8,7 +8,7 @@ Trève de parlotte, on rentre dans le vif du sujet, voilà les étapes :
 
 ## Steps :
 
-- [ ] Installer un nouveau projet Symfony 5.2
+- [ ] Installer un nouveau projet Symfony 5.3
 - [ ] Créer l'entité User 
 - [ ] Réaliser les écrans de création de compte, connexion et déconnexion
 - [ ] Créer les entités suivantes : 
