@@ -1,6 +1,6 @@
 # Test Symfony
 
-Si tu es arrivé jusque-là, c'est que tu as envie de rejoindre la team Cacho et le passage par ce petit test (pas méchant promis) fait partie de la route qui mène à de futur aventures pro à nos cotés !
+Si tu es arrivé jusque-là, c'est que tu as envie de rejoindre la team Cacho et le passage par ce petit test (pas méchant promis) fait partie de la route qui mène à de futures aventures pro à nos cotés !
 
 Trève de parlotte, on rentre dans le vif du sujet, voilà les étapes :
 
