@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Emploi du temps{% endblock %}
+
+{% block body %}
+    <h1 class="mt-3">Liste des rendez-vous</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Consultant</th>
+                <th>Client(e)</th>
+                <th>Lieu</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment.date ? appointment.date|date('Y-m-d') : '' }}</td>
+                <td>{{ appointment.user.username }}</td>
+                <td>{{ appointment.customer.lastname }} {{ appointment.customer.firstname}}</td>
+                 <td>{{ appointment.place.address }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('appointment_edit', {'id': appointment.id}) }}">modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="{{ path('appointment_new') }}">Creer un rendez-vous</a>
+{% endblock %}
