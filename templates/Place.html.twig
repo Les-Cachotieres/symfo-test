@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+
+        <div class="row d-flex">
+            <div class=" d-flex col-sm-7 flex-wrap">
+                {% for key, element in Place %}
+                    <div class="card" style="width: 18rem; col-sm-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{element.name}}</h5>
+                            <p class="card-text">{{element.address}}</p>
+                            <p class="card-text">{{element.city}}</p>
+                            <p class="card-text">{{element.zipCode}}</p>                    
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-sm-5">
+                {{ form_start(PlaceForm) }}
+                    {{ form_row(PlaceForm.File) }}
+
+                    <button type="submit" class="btn btn-primary">send</button>
+                {{ form_end(PlaceForm) }}
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
