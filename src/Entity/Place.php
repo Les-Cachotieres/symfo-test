@@ -43,13 +43,7 @@ class Place
     /**
      * @param mixed $id
      */
-    public function setId($id): void
-    {
-        $this->id = $id;
-    }
-    /**
-     * @return mixed
-     */
+    
     public function getName()
     {
         return $this->name;
